@@ -17,14 +17,14 @@ import { HousingService } from '../housing.service';
     </section>
     <section class="results">
       <app-housing-location
-      *ngFor="let housingLocation of filteredLocationList"
-         [housingLocation]="housingLocation"
+      *ngFor="let item of filteredLocationList" 
+         [housingLocation]="item"
       ></app-housing-location>
     </section>
 
   `, //#filter คือชื่อที่เรากำหนดให้กับ input
   //(input)="filterResults(filter.value) search ตั้งแต่ใส่ยังไม่กดปุ่มก็ search
-  //[housingLocation]  property binding ชื่อเดียวกับ @Input() housingLocation!: HousingLocation;
+  //[housingLocation]  property binding ชื่อเดียวกับ @Input() housingLocation!: HousingLocation; เอามา ng for เพื่อ loop ข้อมูล
   //*ngFor="let housingLocation of filteredLocationList" เอาแค่ตามที่เสิร์ชหา
   styleUrls: ['./home.component.css']
 })

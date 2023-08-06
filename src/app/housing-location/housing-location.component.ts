@@ -25,5 +25,7 @@ import { RouterLink, RouterOutlet } from "@angular/router";
   styleUrls: ["./housing-location.component.css"],
 })
 export class HousingLocationComponent {
-  @Input() housingLocation!: HousingLocation;
+  @Input() housingLocation!: HousingLocation; // housingLocation! แสดงถึงความเชื่อมั่นว่า housingLocation จะไม่มีค่า null หรือ undefined 
+  //input คือ ส่งไป render ในแม่
+  //output คือ ทำ event ในแม่
 }
